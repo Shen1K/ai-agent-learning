@@ -1,0 +1,124 @@
+{
+  "dataset_version": "cup-eval-teaching-v1",
+  "provenance": "助手根据现有杯子任务编写的虚构教学记录，不是真实客户反馈或实际模型输出。标签是待校准的教学预期，不是业务效果实测。",
+  "usage": "全部公开且用于解释、修改方案，因此只作为开发／验证教学数据，不是独立保留测试集，也不能用于报告总体准确率。",
+  "source_reference": "creative_agent/example_task.json；此处冻结其任务内容，后续源文件变更不自动修改本数据。",
+  "task_snapshot_id": "cup-brief-001-v1",
+  "task_snapshot": {
+    "brief": {
+      "audience": "工作日频繁处理屏幕消息的办公人群",
+      "goal": "创作暖序咖啡杯的标题和短正文，表达在忙碌间隙给自己片刻照顾；标题需要清楚的咖啡杯类别线索，不做价格促销。",
+      "tone": "温暖、克制、不说教，不编造用户调研结论。"
+    },
+    "product": {
+      "id": "cup-001",
+      "name": "暖序陶瓷咖啡杯",
+      "facts": {
+        "F1": "产品是暖序陶瓷咖啡杯，材质陶瓷。",
+        "F2": "容量350毫升，米白色。",
+        "F3": "未提供保温时长、健康效果、销量排名或售后承诺。"
+      }
+    },
+    "references": {"R1": "待办先放一放，给自己一杯的时间。"},
+    "constraints": {
+      "headline_max_chars": 18,
+      "required_terms": ["咖啡杯"],
+      "forbidden_terms": ["终身免费换新", "保温十二小时"]
+    }
+  },
+  "records": [
+    {
+      "record_id": "raw-01",
+      "brief_group_id": "office-pause-001",
+      "task_snapshot_id": "cup-brief-001-v1",
+      "candidate": {
+        "headline": "咖啡杯，给自己一口空闲",
+        "body": "消息还在闪，先捧起桌边的咖啡杯。喝一口，再继续。"
+      },
+      "raw_feedback": "表达了办公间隙和捧杯动作，没有用道德要求教育用户。可作为本例的合格稿，但不是唯一好答案。",
+      "teaching_annotation": {
+        "hard": {"format": true, "headline_length": true, "required_headline_term": true, "forbidden_exact_terms": true},
+        "semantic": {"supported_claims": true, "non_preachy": true, "product_integration": true},
+        "overall": "pass_in_this_scope",
+        "evidence": "消息还在闪，先捧起桌边的咖啡杯。",
+        "reason": "产品通过捧杯动作参与情境；描述动作或提出选择，不等于要求用户必须采取某种生活态度。"
+      }
+    },
+    {
+      "record_id": "raw-02",
+      "brief_group_id": "office-pause-001",
+      "task_snapshot_id": "cup-brief-001-v1",
+      "candidate": {
+        "headline": "给自己一口空闲",
+        "body": "消息还在闪，先捧起桌边的咖啡杯。喝一口，再继续。"
+      },
+      "raw_feedback": "正文虽然有咖啡杯，但本任务要求标题包含该词；不是整篇出现就算通过。",
+      "teaching_annotation": {
+        "hard": {"format": true, "headline_length": true, "required_headline_term": false, "forbidden_exact_terms": true},
+        "semantic": {"supported_claims": true, "non_preachy": true, "product_integration": true},
+        "overall": "fail_in_this_scope",
+        "evidence": "给自己一口空闲",
+        "reason": "标题缺少任务指定的精确字符串咖啡杯。这里是明确字段规则，不把语义近似当作通过。"
+      }
+    },
+    {
+      "record_id": "raw-03",
+      "brief_group_id": "office-pause-001",
+      "task_snapshot_id": "cup-brief-001-v1",
+      "candidate": {
+        "headline": "咖啡杯，给自己一口空闲",
+        "body": "消息还在闪，先捧起桌边的咖啡杯。喝一口，再继续。保温十二小时。"
+      },
+      "raw_feedback": "增加了没有事实依据的保温承诺；文案其他部分合格也不能抵消这个问题。",
+      "teaching_annotation": {
+        "hard": {"format": true, "headline_length": true, "required_headline_term": true, "forbidden_exact_terms": false},
+        "semantic": {"supported_claims": false, "non_preachy": true, "product_integration": true},
+        "overall": "fail_in_this_scope",
+        "evidence": "保温十二小时",
+        "reason": "与禁用词精确匹配，同时超出F1—F3提供的事实。换成别的保温措辞时，精确词表未必发现，但语义审核仍应核验。"
+      }
+    },
+    {
+      "record_id": "raw-04",
+      "brief_group_id": "office-pause-001",
+      "task_snapshot_id": "cup-brief-001-v1",
+      "candidate": {
+        "headline": "咖啡杯，给自己一口空闲",
+        "body": "你必须学会关爱自己，别再只顾工作。捧起咖啡杯，喝一口再继续。"
+      },
+      "raw_feedback": "格式、商品词和事实没有明显问题，但必须学会关爱自己在要求用户接受某种生活态度。",
+      "teaching_annotation": {
+        "hard": {"format": true, "headline_length": true, "required_headline_term": true, "forbidden_exact_terms": true},
+        "semantic": {"supported_claims": true, "non_preachy": false, "product_integration": true},
+        "overall": "fail_in_this_scope",
+        "evidence": "你必须学会关爱自己",
+        "reason": "对用户提出强制生活态度要求，属于本例定义的说教；不能因出现产品动作就判整体合格。"
+      }
+    },
+    {
+      "record_id": "raw-05",
+      "brief_group_id": "office-pause-001",
+      "task_snapshot_id": "cup-brief-001-v1",
+      "candidate": {
+        "headline": "咖啡杯，给自己一口空闲",
+        "body": "消息还在闪，先捧起桌边的咖啡杯。喝一口，再继续。"
+      },
+      "raw_feedback": "重复导入raw-01，不能当作一次新的独立评审或新的brief。",
+      "teaching_annotation": {
+        "hard": {"format": true, "headline_length": true, "required_headline_term": true, "forbidden_exact_terms": true},
+        "semantic": {"supported_claims": true, "non_preachy": true, "product_integration": true},
+        "overall": "pass_in_this_scope",
+        "evidence": "消息还在闪，先捧起桌边的咖啡杯。",
+        "reason": "重复副本。"
+      }
+    },
+    {
+      "record_id": "raw-06",
+      "brief_group_id": "unknown",
+      "task_snapshot_id": null,
+      "candidate": {"headline": "咖啡杯，给自己一口空闲", "body": "保温十二小时。"},
+      "raw_feedback": "导出记录缺少当时商品资料和brief，不能确定它适用哪版规则，也不能只凭这句话直接标好或坏。",
+      "teaching_annotation": null
+    }
+  ]
+}

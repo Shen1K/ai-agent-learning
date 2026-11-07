@@ -1,0 +1,38 @@
+{
+  "description": "虚构教学资料；不是客户资料、真实调研或营销效果证明。active由资料维护者指定，不靠模型猜最新版本。",
+  "documents": [
+    {
+      "id": "brand-voice", "version": "2026-11", "product_id": "cup-001", "status": "active", "kind": "policy",
+      "title": "暖序品牌表达规范", "required": true,
+      "sections": [
+        {"id": "tone", "heading": "办公场景的语气", "text": "办公场景采用温暖、克制的语气，允许用幽默和俏皮表达缓解忙碌感。\n但不得暗示咖啡杯可以提高工作效率，也不得用命令口吻要求用户必须休息。"},
+        {"id": "facts", "heading": "参考与事实的边界", "text": "历史案例仅供表达参考，不能据此新增商品功效、价格或售后承诺。\n本次商品事实以任务中冻结的product.facts为准；没有提供的信息不得补写。"}
+      ]
+    },
+    {
+      "id": "brand-voice", "version": "2025-01", "product_id": "cup-001", "status": "archived", "kind": "policy",
+      "title": "暖序品牌表达规范旧版", "required": true,
+      "sections": [{"id": "tone", "heading": "旧推广口号", "text": "旧活动使用狂欢冲销量、立刻抢购的强促销表达。此版本已经归档，不适用于当前任务。"}]
+    },
+    {
+      "id": "case-pause", "version": "1", "product_id": "cup-001", "status": "active", "kind": "case",
+      "title": "办公间隙的捧杯动作", "required": false,
+      "sections": [{"id": "idea", "heading": "动作承接情绪", "text": "场景：消息不断的办公桌前，人物暂时离开屏幕，捧起咖啡杯。\n表达机制：用捧杯这个小动作承接忙碌间隙的片刻休息，让产品参与情境，而非只在结尾贴产品名。\n记录：这是虚构参考案例，没有真实用户测试、点击率或转化率数据，不可声称效果已验证。"}]
+    },
+    {
+      "id": "case-desk", "version": "1", "product_id": "cup-001", "status": "active", "kind": "case",
+      "title": "桌面的小仪式", "required": false,
+      "sections": [{"id": "idea", "heading": "工作开始前的仪式", "text": "场景：开始整理待办之前，把咖啡杯放在桌角。\n表达机制：以摆放动作作为节奏切换，不声称杯子具有改善情绪或提升效率的功效。"}]
+    },
+    {
+      "id": "feedback-cup", "version": "1", "product_id": "cup-001", "status": "active", "kind": "feedback",
+      "title": "虚构提案反馈记录", "required": false,
+      "sections": [{"id": "commands", "heading": "为何否决命令语气", "text": "提案句子：你必须停下来休息。\n否决理由：命令语气像是在教育用户；改稿应描述场景或提供选择，不替用户决定应该如何生活。\n这条记录属于虚构教学反馈，不是实际客户意见。"}]
+    },
+    {
+      "id": "other-brand", "version": "1", "product_id": "cup-999", "status": "active", "kind": "case",
+      "title": "其他商品的模拟隔离资料", "required": false,
+      "sections": [{"id": "idea", "heading": "隔离哨兵", "text": "紫电独家：办公场景温暖克制，捧起咖啡杯离开屏幕。该资料不属于cup-001，不能进入其检索结果。"}]
+    }
+  ]
+}

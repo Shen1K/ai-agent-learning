@@ -1,0 +1,166 @@
+{
+  "observed_date": "2026-10-22",
+  "timezone": "Asia/Shanghai",
+  "account": {
+    "name": "AI大模型老陈",
+    "source_url": "https://www.xiaohongshu.com/user/profile/65d2c79600000000050335eb"
+  },
+  "scope": {
+    "visible_title_count": 60,
+    "notes_read": 7,
+    "note_images_read": 18,
+    "independent_accounts": 1,
+    "selection": "按工程面试、公司求职表达、模式和上下文主题选样，非随机样本"
+  },
+  "frequency_definition": "本次7篇样本内对主题的实质讨论篇数，同篇去重，单纯名词出现不计。不表示原题逐字重复、独立面试次数或市场频率。",
+  "interview_provenance": "公司面试与身份为博主叙述，未独立核实",
+  "sources": [
+    {
+      "key": "S1",
+      "title": "面了个女生Agent逻辑太强了，真让我猛抬头",
+      "url": "https://www.xiaohongshu.com/explore/6ad9d0030000000032014ee8",
+      "published": "2026-10-22",
+      "images_read": 0,
+      "read_scope": "full_text_body"
+    },
+    {
+      "key": "S2",
+      "title": "其实作为面试官，并不在乎你的Agent项目",
+      "url": "https://www.xiaohongshu.com/explore/6ab48a53000000001802e188",
+      "published": "2026-09-24",
+      "images_read": 0,
+      "read_scope": "full_text_body"
+    },
+    {
+      "key": "S3",
+      "title": "科大讯飞面试不管问你啥，记住这一个原则",
+      "url": "https://www.xiaohongshu.com/explore/6aa27715000000002902ca37",
+      "published": "2026-09-10",
+      "images_read": 0,
+      "read_scope": "full_text_body"
+    },
+    {
+      "key": "S4",
+      "title": "米哈游Agent应用开发面经",
+      "url": "https://www.xiaohongshu.com/explore/6a9a8cb8000000001203f908",
+      "published": "2026-09-04",
+      "images_read": 4,
+      "read_scope": "image_text_verified"
+    },
+    {
+      "key": "S5",
+      "title": "AI Agent五种常见的设计模式",
+      "url": "https://www.xiaohongshu.com/explore/6a58e4a1000000000f02b03a",
+      "published": "2026-07-16",
+      "images_read": 6,
+      "read_scope": "image_text_verified"
+    },
+    {
+      "key": "S6",
+      "title": "三分钟搞懂Skills、MCP、Agent三者的区别",
+      "url": "https://www.xiaohongshu.com/explore/6a4ca8c80000000011004ca8",
+      "published": "2026-07-07",
+      "images_read": 4,
+      "read_scope": "image_text_verified"
+    },
+    {
+      "key": "S7",
+      "title": "每天拆解一个AI知识：“上下文工程”",
+      "url": "https://www.xiaohongshu.com/explore/6a6723ec000000000f017d7f",
+      "published": "2026-07-27",
+      "images_read": 4,
+      "read_scope": "image_text_verified"
+    }
+  ],
+  "topics": [
+    {
+      "rank": 1,
+      "question": "什么时候需要 Agent",
+      "sources": [
+        "S2",
+        "S4"
+      ],
+      "theme_note_count": 2,
+      "exact_question_repeat_count": null,
+      "independent_interview_count": null
+    },
+    {
+      "rank": 2,
+      "question": "工具执行失败后如何恢复",
+      "sources": [
+        "S1",
+        "S2"
+      ],
+      "theme_note_count": 2,
+      "exact_question_repeat_count": null,
+      "independent_interview_count": null
+    },
+    {
+      "rank": 3,
+      "question": "如何评估 Agent 并证明优化有效",
+      "sources": [
+        "S1",
+        "S2",
+        "S4"
+      ],
+      "theme_note_count": 3,
+      "exact_question_repeat_count": null,
+      "independent_interview_count": null
+    },
+    {
+      "rank": 4,
+      "question": "如何管理上下文与长短期记忆",
+      "sources": [
+        "S2",
+        "S4",
+        "S7"
+      ],
+      "theme_note_count": 3,
+      "exact_question_repeat_count": null,
+      "independent_interview_count": null
+    },
+    {
+      "rank": 5,
+      "question": "权限与人工确认怎样进入执行链",
+      "sources": [
+        "S1",
+        "S4",
+        "S5"
+      ],
+      "theme_note_count": 3,
+      "exact_question_repeat_count": null,
+      "independent_interview_count": null
+    },
+    {
+      "rank": 6,
+      "question": "MCP 解决什么问题",
+      "sources": [
+        "S4",
+        "S6"
+      ],
+      "theme_note_count": 2,
+      "exact_question_repeat_count": null,
+      "independent_interview_count": null
+    },
+    {
+      "rank": 7,
+      "question": "如何比较 Agent 模式",
+      "sources": [
+        "S5"
+      ],
+      "theme_note_count": 1,
+      "exact_question_repeat_count": null,
+      "independent_interview_count": null
+    },
+    {
+      "rank": 8,
+      "question": "KV cache 与 Prefix caching 为什么有效",
+      "sources": [
+        "S4"
+      ],
+      "theme_note_count": 1,
+      "exact_question_repeat_count": null,
+      "independent_interview_count": null
+    }
+  ]
+}

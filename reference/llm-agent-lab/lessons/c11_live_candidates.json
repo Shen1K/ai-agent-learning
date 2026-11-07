@@ -1,0 +1,23 @@
+{
+  "origin": "2026-10-04 当前对话模型读取真实清单后的候选快照；重跑只重放候选，不重新调用模型。",
+  "source": "data/processed/manifest.json",
+  "source_sha256": "4e62b13e887b6fa524a46f9d435be33e6375c30e9535de1e10cfb956b379ff44",
+  "claims": [
+    {
+      "question_id": "training_count",
+      "field": "training_document_count",
+      "status": "found",
+      "value": 895,
+      "quote": "\"training_document_count\": 895",
+      "line": 6
+    },
+    {
+      "question_id": "training_duration",
+      "field": "training_duration_seconds",
+      "status": "not_found",
+      "value": null,
+      "quote": null,
+      "line": null
+    }
+  ]
+}

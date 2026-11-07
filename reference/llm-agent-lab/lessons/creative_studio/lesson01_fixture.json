@@ -1,0 +1,55 @@
+{
+  "fixture_kind": "fictional_teaching_example",
+  "product": {
+    "id": "cup-001",
+    "version": "1",
+    "brand": "暖序",
+    "name": "暖序陶瓷咖啡杯",
+    "material": "陶瓷",
+    "capacity_ml": 350,
+    "color": "米白色",
+    "activity_price_cny": 69,
+    "reference_image_path": null
+  },
+  "brand_rules": {
+    "version": "1",
+    "style": "温暖、简洁",
+    "allow_unverified_product_claims": false,
+    "price_source": "product.activity_price_cny",
+    "product_visual_strategy": "reuse_approved_product_asset",
+    "text_strategy": "render_text_separately",
+    "publication_policy": "local_draft_only"
+  },
+  "request": {
+    "text": "为这款杯子做一张秋日居家主题海报，突出温暖的感觉，展示活动价。",
+    "product_id": "cup-001",
+    "show_activity_price": true,
+    "width_px": 1024,
+    "height_px": 1024,
+    "variant_count": 1
+  },
+  "creative_proposal": {
+    "origin": "assistant_authored_example_not_api_run",
+    "headline": "把秋日暖意，留在这一刻",
+    "scene": "秋日居家桌面",
+    "background_description": "暖色窗光照在木质桌面上，背景简洁，中央预留商品位置，不生成杯子、文字、价格或标志。",
+    "product_claims": []
+  },
+  "execution_plan": {
+    "product_id": "cup-001",
+    "source_product_version": "1",
+    "source_brand_rules_version": "1",
+    "canvas": {
+      "width_px": 1024,
+      "height_px": 1024
+    },
+    "overlay_text": {
+      "brand": "暖序",
+      "product_name": "暖序陶瓷咖啡杯",
+      "headline": "把秋日暖意，留在这一刻",
+      "price_text": "活动价 ¥69"
+    },
+    "status": "blocked_missing_product_asset",
+    "image_generation_executed": false
+  }
+}

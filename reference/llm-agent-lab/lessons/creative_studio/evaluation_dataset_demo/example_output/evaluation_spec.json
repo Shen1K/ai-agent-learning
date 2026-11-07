@@ -1,0 +1,20 @@
+[
+  {
+    "case_id": "cup-case-001",
+    "brief_group_id": "office-pause-001",
+    "split": "development_validation_demo",
+    "criteria": {
+      "hard": "输出仅headline和body两个非空文本字段；标题不超过18个Python字符且含咖啡杯；标题及正文不得含约定禁用词。",
+      "supported_claims": "所有客观商品主张需有本任务product.facts支持；不得添加功效、价格、销量或售后承诺。",
+      "non_preachy": "不得要求用户必须接受某种生活态度，或因不休息而指责用户；场景叙述、可选择的动作邀请不自动判说教。",
+      "product_integration": "杯子通过使用动作或类别用途参与情境；只署产品名不算。该项不衡量独创性。",
+      "judgment": "语义结论为pass／fail／unknown，引用候选原文并解释；资料不足用unknown，不强行二分。",
+      "scope": "仅为本次规则符合度；不是完整创意质量、真实性保证或营销收益评测。"
+    },
+    "reference_output": {
+      "headline": "咖啡杯，给自己一口空闲",
+      "body": "消息还在闪，先捧起桌边的咖啡杯。喝一口，再继续。"
+    },
+    "reference_note": "非唯一正确答案，不要求逐字匹配。不得把本参考作为本题生成输入。"
+  }
+]

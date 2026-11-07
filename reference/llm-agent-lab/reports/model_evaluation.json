@@ -1,0 +1,641 @@
+{
+  "evaluated_at": "2026-09-09T01:38:06+00:00",
+  "document_counts": {
+    "train": 895,
+    "validation": 100,
+    "test": 20
+  },
+  "document_id_overlaps": {
+    "train_validation": 0,
+    "train_test": 0,
+    "validation_test": 0
+  },
+  "training_data_sha256": "6e75d18862f3f03617f6491439f946f8ea927661239165165e7331222efa91fa",
+  "selected_interpolation_strength": 0.5,
+  "validation_trials": [
+    {
+      "strength": 0.5,
+      "top_1_accuracy": 0.22208715735732085,
+      "top_3_accuracy": 0.35270163496018964,
+      "top_5_accuracy": 0.41730991308575943
+    },
+    {
+      "strength": 1,
+      "top_1_accuracy": 0.22208715735732085,
+      "top_3_accuracy": 0.35270163496018964,
+      "top_5_accuracy": 0.41730991308575943
+    },
+    {
+      "strength": 2,
+      "top_1_accuracy": 0.2218440406004984,
+      "top_3_accuracy": 0.35276241414939524,
+      "top_5_accuracy": 0.41730991308575943
+    },
+    {
+      "strength": 5,
+      "top_1_accuracy": 0.2207500151947973,
+      "top_3_accuracy": 0.35306631009542333,
+      "top_5_accuracy": 0.4174922506533763
+    },
+    {
+      "strength": 10,
+      "top_1_accuracy": 0.21862274357260075,
+      "top_3_accuracy": 0.35312708928462894,
+      "top_5_accuracy": 0.4181000425454324
+    },
+    {
+      "strength": 20,
+      "top_1_accuracy": 0.21272716221965599,
+      "top_3_accuracy": 0.3500273506351425,
+      "top_5_accuracy": 0.4182823801130493
+    },
+    {
+      "strength": 50,
+      "top_1_accuracy": 0.20269859600072934,
+      "top_3_accuracy": 0.34285540630887984,
+      "top_5_accuracy": 0.4134808241658056
+    }
+  ],
+  "test_results": {
+    "single_character": {
+      "name": "单字符 Bigram",
+      "total_predictions": 13560,
+      "covered_predictions": 13524,
+      "coverage": 0.9973451327433628,
+      "top_1_correct": 1809,
+      "top_1_accuracy": 0.1334070796460177,
+      "top_3_accuracy": 0.2558997050147493,
+      "top_5_accuracy": 0.32551622418879056,
+      "top_1_accuracy_when_covered": 0.13376220053238685,
+      "examples": {
+        "correct": [
+          {
+            "context": "在深",
+            "predicted": "度",
+            "actual": "度",
+            "top_5": [
+              "度",
+              "蓝",
+              "色",
+              "水",
+              "海"
+            ]
+          },
+          {
+            "context": "头注",
+            "predicted": "意",
+            "actual": "意",
+            "top_5": [
+              "意",
+              "入",
+              "灌",
+              "定",
+              "射"
+            ]
+          },
+          {
+            "context": "为称",
+            "predicted": "为",
+            "actual": "为",
+            "top_5": [
+              "为",
+              "“",
+              "作",
+              ",",
+              "其"
+            ]
+          },
+          {
+            "context": "值表",
+            "predicted": "示",
+            "actual": "示",
+            "top_5": [
+              "示",
+              "演",
+              "团",
+              "面",
+              ","
+            ]
+          },
+          {
+            "context": "元通",
+            "predicted": "过",
+            "actual": "过",
+            "top_5": [
+              "过",
+              "常",
+              "用",
+              "车",
+              "称"
+            ]
+          }
+        ],
+        "wrong": [
+          {
+            "context": "深度",
+            "predicted": "使",
+            "actual": "学",
+            "top_5": [
+              "使",
+              "为",
+              ",",
+              "的",
+              "地"
+            ]
+          },
+          {
+            "context": "度学",
+            "predicted": "名",
+            "actual": "习",
+            "top_5": [
+              "名",
+              "家",
+              "校",
+              "院",
+              "习"
+            ]
+          },
+          {
+            "context": "学习",
+            "predicted": "性",
+            "actual": "中",
+            "top_5": [
+              "性",
+              "惯",
+              "的",
+              "近",
+              ","
+            ]
+          },
+          {
+            "context": "直译",
+            "predicted": "《",
+            "actual": "为",
+            "top_5": [
+              "《",
+              "作",
+              "为",
+              ":",
+              "“"
+            ]
+          },
+          {
+            "context": "变换",
+            "predicted": "群",
+            "actual": "器",
+            "top_5": [
+              "群",
+              "。",
+              ",",
+              "效",
+              "乘"
+            ]
+          }
+        ],
+        "uncovered": [
+          {
+            "context": "词嵌",
+            "actual": "入"
+          },
+          {
+            "context": "对弈",
+            "actual": "与"
+          },
+          {
+            "context": "借鉴",
+            "actual": "心"
+          },
+          {
+            "context": "等聊",
+            "actual": "天"
+          },
+          {
+            "context": "化決",
+            "actual": "策"
+          }
+        ]
+      }
+    },
+    "two_character": {
+      "name": "双字符 Trigram",
+      "total_predictions": 13560,
+      "covered_predictions": 9034,
+      "coverage": 0.6662241887905604,
+      "top_1_correct": 1530,
+      "top_1_accuracy": 0.11283185840707964,
+      "top_3_accuracy": 0.16828908554572272,
+      "top_5_accuracy": 0.18952802359882007,
+      "top_1_accuracy_when_covered": 0.16936019481957051,
+      "examples": {
+        "correct": [
+          {
+            "context": "为一",
+            "predicted": "个",
+            "actual": "个",
+            "top_5": [
+              "个",
+              "条",
+              "体",
+              "场",
+              "起"
+            ]
+          },
+          {
+            "context": "的范",
+            "predicted": "围",
+            "actual": "围",
+            "top_5": [
+              "围",
+              "畴"
+            ]
+          },
+          {
+            "context": "范围",
+            "predicted": "内",
+            "actual": "内",
+            "top_5": [
+              "内",
+              "的",
+              "包",
+              "为",
+              "囊"
+            ]
+          },
+          {
+            "context": "重要",
+            "predicted": "的",
+            "actual": "的",
+            "top_5": [
+              "的",
+              "性",
+              "市",
+              "组",
+              "标"
+            ]
+          },
+          {
+            "context": "的不",
+            "predicted": "同",
+            "actual": "同",
+            "top_5": [
+              "同",
+              "正"
+            ]
+          }
+        ],
+        "wrong": [
+          {
+            "context": "深度",
+            "predicted": "1",
+            "actual": "学",
+            "top_5": [
+              "1",
+              "2",
+              "可",
+              "和",
+              "为"
+            ]
+          },
+          {
+            "context": "学习",
+            "predicted": "的",
+            "actual": "中",
+            "top_5": [
+              "的",
+              ",",
+              "者",
+              "最",
+              "对"
+            ]
+          },
+          {
+            "context": "直译",
+            "predicted": ":",
+            "actual": "为",
+            "top_5": [
+              ":"
+            ]
+          },
+          {
+            "context": "变换",
+            "predicted": "群",
+            "actual": "器",
+            "top_5": [
+              "群",
+              "作",
+              "。",
+              "来",
+              "与"
+            ]
+          },
+          {
+            "context": "是一",
+            "predicted": "个",
+            "actual": "种",
+            "top_5": [
+              "个",
+              "种",
+              "名",
+              "部",
+              "颗"
+            ]
+          }
+        ],
+        "uncovered": [
+          {
+            "context": "在深",
+            "actual": "度"
+          },
+          {
+            "context": "度学",
+            "actual": "习"
+          },
+          {
+            "context": "种基",
+            "actual": "于"
+          },
+          {
+            "context": "多头",
+            "actual": "注"
+          },
+          {
+            "context": "头注",
+            "actual": "意"
+          }
+        ]
+      }
+    },
+    "hard_backoff": {
+      "name": "Trigram→Bigram→Unigram 硬回退",
+      "total_predictions": 13560,
+      "covered_predictions": 13560,
+      "coverage": 1.0,
+      "top_1_correct": 2295,
+      "top_1_accuracy": 0.16924778761061948,
+      "top_3_accuracy": 0.2713126843657817,
+      "top_5_accuracy": 0.31541297935103246,
+      "top_1_accuracy_when_covered": 0.16924778761061948,
+      "examples": {
+        "correct": [
+          {
+            "context": "在深",
+            "predicted": "度",
+            "actual": "度",
+            "top_5": [
+              "度",
+              "蓝",
+              "色",
+              "水",
+              "海"
+            ]
+          },
+          {
+            "context": "头注",
+            "predicted": "意",
+            "actual": "意",
+            "top_5": [
+              "意",
+              "入",
+              "灌",
+              "定",
+              "射"
+            ]
+          },
+          {
+            "context": "为称",
+            "predicted": "为",
+            "actual": "为",
+            "top_5": [
+              "为",
+              "“",
+              "作",
+              ",",
+              "其"
+            ]
+          },
+          {
+            "context": "值表",
+            "predicted": "示",
+            "actual": "示",
+            "top_5": [
+              "示",
+              "演",
+              "团",
+              "面",
+              ","
+            ]
+          },
+          {
+            "context": "元通",
+            "predicted": "过",
+            "actual": "过",
+            "top_5": [
+              "过",
+              "常",
+              "用",
+              "车",
+              "称"
+            ]
+          }
+        ],
+        "wrong": [
+          {
+            "context": "深度",
+            "predicted": "1",
+            "actual": "学",
+            "top_5": [
+              "1",
+              "2",
+              "可",
+              "和",
+              "为"
+            ]
+          },
+          {
+            "context": "度学",
+            "predicted": "名",
+            "actual": "习",
+            "top_5": [
+              "名",
+              "家",
+              "校",
+              "院",
+              "习"
+            ]
+          },
+          {
+            "context": "学习",
+            "predicted": "的",
+            "actual": "中",
+            "top_5": [
+              "的",
+              ",",
+              "者",
+              "最",
+              "对"
+            ]
+          },
+          {
+            "context": "直译",
+            "predicted": ":",
+            "actual": "为",
+            "top_5": [
+              ":"
+            ]
+          },
+          {
+            "context": "变换",
+            "predicted": "群",
+            "actual": "器",
+            "top_5": [
+              "群",
+              "作",
+              "。",
+              "来",
+              "与"
+            ]
+          }
+        ],
+        "uncovered": []
+      }
+    },
+    "adaptive_interpolation": {
+      "name": "Trigram+Bigram+Unigram 自适应插值",
+      "total_predictions": 13560,
+      "covered_predictions": 13560,
+      "coverage": 1.0,
+      "top_1_correct": 2348,
+      "top_1_accuracy": 0.17315634218289086,
+      "top_3_accuracy": 0.2890117994100295,
+      "top_5_accuracy": 0.35140117994100295,
+      "top_1_accuracy_when_covered": 0.17315634218289086,
+      "examples": {
+        "correct": [
+          {
+            "context": "在深",
+            "predicted": "度",
+            "actual": "度",
+            "top_5": [
+              "度",
+              "蓝",
+              "海",
+              "水",
+              "色"
+            ]
+          },
+          {
+            "context": "头注",
+            "predicted": "意",
+            "actual": "意",
+            "top_5": [
+              "意",
+              "入",
+              "台",
+              "定",
+              "射"
+            ]
+          },
+          {
+            "context": "为称",
+            "predicted": "为",
+            "actual": "为",
+            "top_5": [
+              "为",
+              "“",
+              "作",
+              ",",
+              "。"
+            ]
+          },
+          {
+            "context": "值表",
+            "predicted": "示",
+            "actual": "示",
+            "top_5": [
+              "示",
+              "演",
+              "团",
+              "面",
+              ","
+            ]
+          },
+          {
+            "context": "元通",
+            "predicted": "过",
+            "actual": "过",
+            "top_5": [
+              "过",
+              "常",
+              "用",
+              "车",
+              "称"
+            ]
+          }
+        ],
+        "wrong": [
+          {
+            "context": "深度",
+            "predicted": "1",
+            "actual": "学",
+            "top_5": [
+              "1",
+              "为",
+              "2",
+              "和",
+              "0"
+            ]
+          },
+          {
+            "context": "度学",
+            "predicted": "名",
+            "actual": "习",
+            "top_5": [
+              "名",
+              "家",
+              "校",
+              "院",
+              "者"
+            ]
+          },
+          {
+            "context": "学习",
+            "predicted": ",",
+            "actual": "中",
+            "top_5": [
+              ",",
+              "的",
+              "。",
+              "英",
+              "政"
+            ]
+          },
+          {
+            "context": "直译",
+            "predicted": ":",
+            "actual": "为",
+            "top_5": [
+              ":",
+              "作",
+              "《",
+              "为",
+              "“"
+            ]
+          },
+          {
+            "context": "变换",
+            "predicted": "群",
+            "actual": "器",
+            "top_5": [
+              "群",
+              "。",
+              "作",
+              "与",
+              "等"
+            ]
+          }
+        ],
+        "uncovered": []
+      }
+    }
+  }
+}

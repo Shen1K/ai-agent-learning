@@ -1,0 +1,190 @@
+{
+  "nodes": [
+    {
+      "id": "AK-K01",
+      "type": "file",
+      "file": "knowledge/AI Agent 学习/广告创意Agent知识图谱/AK-K01 Agent编排与工作流.md",
+      "subpath": "#图谱摘要",
+      "x": 0,
+      "y": 0,
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "AK-K02",
+      "type": "file",
+      "file": "knowledge/AI Agent 学习/广告创意Agent知识图谱/AK-K02 上下文与状态.md",
+      "subpath": "#图谱摘要",
+      "x": 0,
+      "y": -340,
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "AK-K03",
+      "type": "file",
+      "file": "knowledge/AI Agent 学习/广告创意Agent知识图谱/AK-K03 工具与执行边界.md",
+      "subpath": "#图谱摘要",
+      "x": 550,
+      "y": 0,
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "AK-K04",
+      "type": "file",
+      "file": "knowledge/AI Agent 学习/广告创意Agent知识图谱/AK-K04 RAG知识增强.md",
+      "subpath": "#图谱摘要",
+      "x": -550,
+      "y": 0,
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "AK-K05",
+      "type": "file",
+      "file": "knowledge/AI Agent 学习/广告创意Agent知识图谱/AK-K05 创意生成与多模态.md",
+      "subpath": "#图谱摘要",
+      "x": 550,
+      "y": 340,
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "AK-K06",
+      "type": "file",
+      "file": "knowledge/AI Agent 学习/广告创意Agent知识图谱/AK-K06 服务调度与可靠性.md",
+      "subpath": "#图谱摘要",
+      "x": -550,
+      "y": 680,
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "AK-K07",
+      "type": "file",
+      "file": "knowledge/AI Agent 学习/广告创意Agent知识图谱/AK-K07 模型部署与推理优化.md",
+      "subpath": "#图谱摘要",
+      "x": 0,
+      "y": 680,
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "AK-K08",
+      "type": "file",
+      "file": "knowledge/AI Agent 学习/广告创意Agent知识图谱/AK-K08 SFT与LoRA.md",
+      "subpath": "#图谱摘要",
+      "x": 0,
+      "y": 1020,
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "AK-K09",
+      "type": "file",
+      "file": "knowledge/AI Agent 学习/广告创意Agent知识图谱/AK-K09 评测数据与反馈.md",
+      "subpath": "#图谱摘要",
+      "x": 0,
+      "y": 340,
+      "width": 420,
+      "height": 220
+    },
+    {
+      "id": "AK-K10",
+      "type": "file",
+      "file": "knowledge/AI Agent 学习/广告创意Agent知识图谱/AK-K10 观测版本与发布.md",
+      "subpath": "#图谱摘要",
+      "x": 550,
+      "y": 680,
+      "width": 420,
+      "height": 220
+    }
+  ],
+  "edges": [
+    {
+      "id": "a0",
+      "fromNode": "AK-K02",
+      "toNode": "AK-K01",
+      "toEnd": "arrow",
+      "label": "提供本轮输入"
+    },
+    {
+      "id": "a1",
+      "fromNode": "AK-K01",
+      "toNode": "AK-K03",
+      "toEnd": "arrow",
+      "label": "提出受控动作"
+    },
+    {
+      "id": "a2",
+      "fromNode": "AK-K03",
+      "toNode": "AK-K04",
+      "toEnd": "arrow",
+      "label": "按需检索"
+    },
+    {
+      "id": "a3",
+      "fromNode": "AK-K04",
+      "toNode": "AK-K02",
+      "toEnd": "arrow",
+      "label": "返回资料"
+    },
+    {
+      "id": "a4",
+      "fromNode": "AK-K01",
+      "toNode": "AK-K05",
+      "toEnd": "arrow",
+      "label": "组织内容生产"
+    },
+    {
+      "id": "a5",
+      "fromNode": "AK-K05",
+      "toNode": "AK-K09",
+      "toEnd": "arrow",
+      "label": "提交候选检查"
+    },
+    {
+      "id": "a6",
+      "fromNode": "AK-K09",
+      "toNode": "AK-K01",
+      "toEnd": "arrow",
+      "label": "反馈或交付条件"
+    },
+    {
+      "id": "a7",
+      "fromNode": "AK-K06",
+      "toNode": "AK-K01",
+      "toEnd": "arrow",
+      "label": "调度与恢复"
+    },
+    {
+      "id": "a8",
+      "fromNode": "AK-K07",
+      "toNode": "AK-K05",
+      "toEnd": "arrow",
+      "label": "提供模型计算"
+    },
+    {
+      "id": "a9",
+      "fromNode": "AK-K09",
+      "toNode": "AK-K08",
+      "toEnd": "arrow",
+      "label": "筛选数据并验证"
+    },
+    {
+      "id": "a10",
+      "fromNode": "AK-K08",
+      "toNode": "AK-K07",
+      "toEnd": "arrow",
+      "label": "交付适配权重"
+    },
+    {
+      "id": "a11",
+      "fromNode": "AK-K10",
+      "toNode": "AK-K06",
+      "toEnd": "arrow",
+      "label": "观测与版本保障"
+    }
+  ]
+}

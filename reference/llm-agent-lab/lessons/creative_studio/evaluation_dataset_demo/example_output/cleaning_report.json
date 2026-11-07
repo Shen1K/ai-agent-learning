@@ -1,0 +1,22 @@
+{
+  "dataset_version": "cup-eval-teaching-v1",
+  "raw_sha256": "11fdcccd7026c47390f0b2295ce708438940590c3aded37374be372d35fa1b40",
+  "raw_records": 6,
+  "accepted_unique_candidates": 4,
+  "unique_generation_cases": 1,
+  "brief_groups": 1,
+  "duplicates": [
+    {
+      "record_id": "raw-05",
+      "duplicate_of": "raw-01"
+    }
+  ],
+  "quarantine": [
+    {
+      "record_id": "raw-06",
+      "reason": "缺少可确认的任务快照或判据标注；暂不计分，保留待补资料"
+    }
+  ],
+  "cleaning_boundary": "原文保留；不删除坏文案、不纠正缺词、不补写事实、不把缺资料当成模型错误。",
+  "split_warning": "只有一个brief组，不能据此构造独立训练／验证／测试切分。所有公开样例只用于教学开发与校准。"
+}

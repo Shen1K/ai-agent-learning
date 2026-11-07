@@ -1,0 +1,13 @@
+{
+  "description": "公开教学开发集，不是独立保留测试集。expected只供评分端，不传给检索或生成模型。",
+  "cases": [
+    {"id": "literal_scene", "question": "办公场景 离开屏幕 捧起咖啡杯", "source_id": "case-pause@1:idea", "required_quotes": ["人物暂时离开屏幕，捧起咖啡杯"], "expect_empty": false, "lesson": "E01：关键词召回能否找到明确场景"},
+    {"id": "missing_exception", "question": "幽默 俏皮表达", "source_id": "brand-voice@2026-11:tone", "required_quotes": ["允许用幽默和俏皮表达", "不得暗示咖啡杯可以提高工作效率"], "expect_empty": false, "lesson": "D02：命中规则，但小片段遗漏例外"},
+    {"id": "feedback_reason", "question": "你必须停下来休息", "source_id": "feedback-cup@1:commands", "required_quotes": ["你必须停下来休息", "命令语气像是在教育用户"], "expect_empty": false, "lesson": "D02/E05：找到被否决的句子还不够，需要否决原因"},
+    {"id": "missing_measurement", "question": "片刻休息 捧杯", "source_id": "case-pause@1:idea", "required_quotes": ["没有真实用户测试、点击率或转化率数据"], "expect_empty": false, "lesson": "E08：参考案例不能被写成已验证营销收益"},
+    {"id": "semantic_gap", "question": "喘息", "source_id": "case-pause@1:idea", "required_quotes": ["片刻休息"], "expect_empty": false, "lesson": "D06/E01：故意保留词汇不重合的漏检，引出真实Embedding和混合检索"},
+    {"id": "archived_only", "question": "狂欢冲销量", "source_id": null, "required_quotes": [], "expect_empty": true, "lesson": "版本过滤：旧资料不进入候选"},
+    {"id": "wrong_product", "question": "紫电独家", "source_id": null, "required_quotes": [], "expect_empty": true, "lesson": "范围过滤：其他商品资料不进入候选；不等于多租户认证"},
+    {"id": "no_evidence", "question": "核聚变发动机", "source_id": null, "required_quotes": [], "expect_empty": true, "lesson": "无相关资料时返回空，不强凑top-k"}
+  ]
+}

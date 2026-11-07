@@ -1,0 +1,56 @@
+{
+  "scope": "只检查固定候选的四项确定性规则；没有执行Agent生成或模型语义评审。",
+  "results": [
+    {
+      "item_id": "judge-001",
+      "actual_hard_checks": {
+        "format": true,
+        "headline_length": true,
+        "required_headline_term": true,
+        "forbidden_exact_terms": true
+      },
+      "matches_teaching_hard_labels": true,
+      "semantic_execution": "not_run",
+      "overall_machine_verdict": "not_evaluated"
+    },
+    {
+      "item_id": "judge-002",
+      "actual_hard_checks": {
+        "format": true,
+        "headline_length": true,
+        "required_headline_term": false,
+        "forbidden_exact_terms": true
+      },
+      "matches_teaching_hard_labels": true,
+      "semantic_execution": "not_run",
+      "overall_machine_verdict": "not_evaluated"
+    },
+    {
+      "item_id": "judge-003",
+      "actual_hard_checks": {
+        "format": true,
+        "headline_length": true,
+        "required_headline_term": true,
+        "forbidden_exact_terms": false
+      },
+      "matches_teaching_hard_labels": true,
+      "semantic_execution": "not_run",
+      "overall_machine_verdict": "not_evaluated"
+    },
+    {
+      "item_id": "judge-004",
+      "actual_hard_checks": {
+        "format": true,
+        "headline_length": true,
+        "required_headline_term": true,
+        "forbidden_exact_terms": true
+      },
+      "matches_teaching_hard_labels": true,
+      "semantic_execution": "not_run",
+      "overall_machine_verdict": "not_evaluated"
+    }
+  ],
+  "matching_candidates": 4,
+  "candidate_count": 4,
+  "metric_warning": "标签一致仅验证本演示规则，不是Agent准确率或模型审核准确率。"
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "item_id": "judge-001",
+    "source_record_id": "raw-01",
+    "brief_group_id": "office-pause-001",
+    "expected": {
+      "hard": {
+        "format": true,
+        "headline_length": true,
+        "required_headline_term": true,
+        "forbidden_exact_terms": true
+      },
+      "semantic": {
+        "supported_claims": true,
+        "non_preachy": true,
+        "product_integration": true
+      },
+      "overall": "pass_in_this_scope",
+      "evidence": "消息还在闪，先捧起桌边的咖啡杯。",
+      "reason": "产品通过捧杯动作参与情境；描述动作或提出选择，不等于要求用户必须采取某种生活态度。"
+    }
+  },
+  {
+    "item_id": "judge-002",
+    "source_record_id": "raw-02",
+    "brief_group_id": "office-pause-001",
+    "expected": {
+      "hard": {
+        "format": true,
+        "headline_length": true,
+        "required_headline_term": false,
+        "forbidden_exact_terms": true
+      },
+      "semantic": {
+        "supported_claims": true,
+        "non_preachy": true,
+        "product_integration": true
+      },
+      "overall": "fail_in_this_scope",
+      "evidence": "给自己一口空闲",
+      "reason": "标题缺少任务指定的精确字符串咖啡杯。这里是明确字段规则，不把语义近似当作通过。"
+    }
+  },
+  {
+    "item_id": "judge-003",
+    "source_record_id": "raw-03",
+    "brief_group_id": "office-pause-001",
+    "expected": {
+      "hard": {
+        "format": true,
+        "headline_length": true,
+        "required_headline_term": true,
+        "forbidden_exact_terms": false
+      },
+      "semantic": {
+        "supported_claims": false,
+        "non_preachy": true,
+        "product_integration": true
+      },
+      "overall": "fail_in_this_scope",
+      "evidence": "保温十二小时",
+      "reason": "与禁用词精确匹配，同时超出F1—F3提供的事实。换成别的保温措辞时，精确词表未必发现，但语义审核仍应核验。"
+    }
+  },
+  {
+    "item_id": "judge-004",
+    "source_record_id": "raw-04",
+    "brief_group_id": "office-pause-001",
+    "expected": {
+      "hard": {
+        "format": true,
+        "headline_length": true,
+        "required_headline_term": true,
+        "forbidden_exact_terms": true
+      },
+      "semantic": {
+        "supported_claims": true,
+        "non_preachy": false,
+        "product_integration": true
+      },
+      "overall": "fail_in_this_scope",
+      "evidence": "你必须学会关爱自己",
+      "reason": "对用户提出强制生活态度要求，属于本例定义的说教；不能因出现产品动作就判整体合格。"
+    }
+  }
+]

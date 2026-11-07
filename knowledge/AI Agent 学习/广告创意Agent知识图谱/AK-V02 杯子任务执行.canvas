@@ -1,0 +1,149 @@
+{
+  "nodes": [
+    {
+      "id": "step0",
+      "type": "file",
+      "file": "knowledge/AI Agent 学习/广告创意Agent知识图谱/AK-C01 杯子任务从需求到改稿.md",
+      "subpath": "#任务输入",
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 230
+    },
+    {
+      "id": "step1",
+      "type": "file",
+      "file": "knowledge/AI Agent 学习/广告创意Agent知识图谱/AK-C01 杯子任务从需求到改稿.md",
+      "subpath": "#资料组装",
+      "x": 500,
+      "y": 0,
+      "width": 390,
+      "height": 230
+    },
+    {
+      "id": "step2",
+      "type": "file",
+      "file": "knowledge/AI Agent 学习/广告创意Agent知识图谱/AK-C01 杯子任务从需求到改稿.md",
+      "subpath": "#模型与工具",
+      "x": 1000,
+      "y": 0,
+      "width": 390,
+      "height": 230
+    },
+    {
+      "id": "step3",
+      "type": "file",
+      "file": "knowledge/AI Agent 学习/广告创意Agent知识图谱/AK-C01 杯子任务从需求到改稿.md",
+      "subpath": "#保存候选",
+      "x": 1000,
+      "y": 360,
+      "width": 390,
+      "height": 230
+    },
+    {
+      "id": "step4",
+      "type": "file",
+      "file": "knowledge/AI Agent 学习/广告创意Agent知识图谱/AK-C01 杯子任务从需求到改稿.md",
+      "subpath": "#检查与修改",
+      "x": 500,
+      "y": 360,
+      "width": 390,
+      "height": 230
+    },
+    {
+      "id": "step5",
+      "type": "file",
+      "file": "knowledge/AI Agent 学习/广告创意Agent知识图谱/AK-C01 杯子任务从需求到改稿.md",
+      "subpath": "#用户确认",
+      "x": 0,
+      "y": 360,
+      "width": 390,
+      "height": 230
+    },
+    {
+      "id": "step6",
+      "type": "file",
+      "file": "knowledge/AI Agent 学习/广告创意Agent知识图谱/AK-C01 杯子任务从需求到改稿.md",
+      "subpath": "#过程记录",
+      "x": 0,
+      "y": 720,
+      "width": 390,
+      "height": 230
+    },
+    {
+      "id": "rubric",
+      "type": "file",
+      "file": "knowledge/AI Agent 学习/广告创意Agent知识图谱/AK-K09 评测数据与反馈.md",
+      "subpath": "#图谱摘要",
+      "x": 500,
+      "y": 720,
+      "width": 390,
+      "height": 230
+    }
+  ],
+  "edges": [
+    {
+      "id": "s0",
+      "fromNode": "step0",
+      "toNode": "step1",
+      "toEnd": "arrow",
+      "label": "保存任务"
+    },
+    {
+      "id": "s1",
+      "fromNode": "step1",
+      "toNode": "step2",
+      "toEnd": "arrow",
+      "label": "准备上下文"
+    },
+    {
+      "id": "s2",
+      "fromNode": "step2",
+      "toNode": "step3",
+      "toEnd": "arrow",
+      "label": "生成候选"
+    },
+    {
+      "id": "s3",
+      "fromNode": "step3",
+      "toNode": "step4",
+      "toEnd": "arrow",
+      "label": "检查"
+    },
+    {
+      "id": "s4",
+      "fromNode": "step4",
+      "toNode": "step5",
+      "toEnd": "arrow",
+      "label": "通过后确认"
+    },
+    {
+      "id": "s5",
+      "fromNode": "step4",
+      "toNode": "step2",
+      "toEnd": "arrow",
+      "label": "失败后修改"
+    },
+    {
+      "id": "s6",
+      "fromNode": "step2",
+      "toNode": "step1",
+      "toEnd": "arrow",
+      "label": "资料不足时补查"
+    },
+    {
+      "id": "s7",
+      "fromNode": "step6",
+      "toNode": "step3",
+      "toEnd": "arrow",
+      "label": "关联版本与过程"
+    },
+    {
+      "id": "s8",
+      "fromNode": "rubric",
+      "toNode": "step4",
+      "toEnd": "arrow",
+      "label": "判据与反馈机制"
+    }
+  ]
+}

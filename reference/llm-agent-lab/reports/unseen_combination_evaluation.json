@@ -1,0 +1,156 @@
+{
+  "evaluated_at": "2026-09-09T01:38:07+00:00",
+  "definition": "two-character context absent from training trigram table; both context characters and target exist in training vocabulary",
+  "eligible_example_count": 1623,
+  "neural_vocabulary_size": 512,
+  "interpolation_strength_selected_on_validation": 0.5,
+  "training_data_sha256": "6e75d18862f3f03617f6491439f946f8ea927661239165165e7331222efa91fa",
+  "results": {
+    "bigram": {
+      "name": "单字符 Bigram",
+      "top_1_accuracy": 0.18422674060382008,
+      "top_3_accuracy": 0.3647566235366605,
+      "top_5_accuracy": 0.43622920517560076
+    },
+    "hard_backoff": {
+      "name": "Trigram→Bigram→Unigram 硬回退",
+      "top_1_accuracy": 0.18422674060382008,
+      "top_3_accuracy": 0.3647566235366605,
+      "top_5_accuracy": 0.43622920517560076
+    },
+    "adaptive_interpolation": {
+      "name": "三级自适应插值",
+      "top_1_accuracy": 0.18422674060382008,
+      "top_3_accuracy": 0.3709180529882933,
+      "top_5_accuracy": 0.43869377695625383
+    },
+    "neural": {
+      "name": "Embedding + 前馈神经网络",
+      "top_1_accuracy": 0.19654959950708564,
+      "top_3_accuracy": 0.33826247689463956,
+      "top_5_accuracy": 0.4091189155884165
+    }
+  },
+  "examples": [
+    {
+      "unseen_context": "种基",
+      "actual": "于",
+      "neural_top_5": [
+        "于",
+        "地",
+        "其",
+        "作",
+        "本"
+      ],
+      "top_1_correct": true
+    },
+    {
+      "unseen_context": "力机",
+      "actual": "制",
+      "neural_top_5": [
+        "构",
+        "场",
+        "会",
+        "的",
+        "于"
+      ],
+      "top_1_correct": false
+    },
+    {
+      "unseen_context": "工神",
+      "actual": "经",
+      "neural_top_5": [
+        ",",
+        "。",
+        "、",
+        "的",
+        "于"
+      ],
+      "top_1_correct": false
+    },
+    {
+      "unseen_context": "文本",
+      "actual": "被",
+      "neural_top_5": [
+        "影",
+        "保",
+        "的",
+        "站",
+        "语"
+      ],
+      "top_1_correct": false
+    },
+    {
+      "unseen_context": "为称",
+      "actual": "为",
+      "neural_top_5": [
+        "“",
+        ":",
+        "为",
+        "其",
+        "本"
+      ],
+      "top_1_correct": false
+    },
+    {
+      "unseen_context": "元通",
+      "actual": "过",
+      "neural_top_5": [
+        "用",
+        "过",
+        "车",
+        "常",
+        "行"
+      ],
+      "top_1_correct": false
+    },
+    {
+      "unseen_context": "入表",
+      "actual": "中",
+      "neural_top_5": [
+        "演",
+        ",",
+        "团",
+        "马",
+        "布"
+      ],
+      "top_1_correct": false
+    },
+    {
+      "unseen_context": "个向",
+      "actual": "量",
+      "neural_top_5": [
+        "南",
+        "东",
+        "北",
+        "人",
+        "西"
+      ],
+      "top_1_correct": false
+    },
+    {
+      "unseen_context": "元都",
+      "actual": "通",
+      "neural_top_5": [
+        "是",
+        ",",
+        "有",
+        "和",
+        "、"
+      ],
+      "top_1_correct": false
+    },
+    {
+      "unseen_context": "都通",
+      "actual": "过",
+      "neural_top_5": [
+        "常",
+        "过",
+        "用",
+        "车",
+        "湖"
+      ],
+      "top_1_correct": false
+    }
+  ]
+}

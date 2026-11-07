@@ -1,0 +1,37 @@
+{
+  "origin": "teacher_authored_interpretations_not_api_run",
+  "cases": [
+    {
+      "id": "one_cup",
+      "headline": "买一个杯子，领券后共59元（免运费）",
+      "activity_id": "autumn-demo",
+      "rule_version": "1",
+      "order": {"product_id": "cup-001", "quantity": 1, "shipping_cents": 0, "other_discounts_present": false},
+      "interpretation": {"quote": "买一个杯子，领券后共59元（免运费）", "quantity": 1, "price_basis": "order_total_including_shipping", "claimed_total_cents": 5900, "claims_coupon_applied": true}
+    },
+    {
+      "id": "two_cups",
+      "headline": "买两个杯子，领券后共128元（免运费）",
+      "activity_id": "autumn-demo",
+      "rule_version": "1",
+      "order": {"product_id": "cup-001", "quantity": 2, "shipping_cents": 0, "other_discounts_present": false},
+      "interpretation": {"quote": "买两个杯子，领券后共128元（免运费）", "quantity": 2, "price_basis": "order_total_including_shipping", "claimed_total_cents": 12800, "claims_coupon_applied": true}
+    },
+    {
+      "id": "shipping_is_not_goods",
+      "headline": "买一个杯子，含30元运费，领券后共89元",
+      "activity_id": "autumn-demo",
+      "rule_version": "1",
+      "order": {"product_id": "cup-001", "quantity": 1, "shipping_cents": 3000, "other_discounts_present": false},
+      "interpretation": {"quote": "买一个杯子，含30元运费，领券后共89元", "quantity": 1, "price_basis": "order_total_including_shipping", "claimed_total_cents": 8900, "claims_coupon_applied": true}
+    },
+    {
+      "id": "ambiguous_per_cup",
+      "headline": "组合优惠，每杯低至59元",
+      "activity_id": "autumn-demo",
+      "rule_version": "1",
+      "order": {"product_id": "cup-001", "quantity": 2, "shipping_cents": 0, "other_discounts_present": false},
+      "interpretation": {"quote": "组合优惠，每杯低至59元", "quantity": null, "price_basis": "unclear", "claimed_total_cents": null, "claims_coupon_applied": null}
+    }
+  ]
+}
